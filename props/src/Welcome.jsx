@@ -1,8 +1,9 @@
-export function Welcome({name}) {
+export function Welcome({name, age}) {
     return(
-        <p>
-            Welcome, {name? name :"User"}!
-        </p>
+        <div>
+            <strong>Welcome, {name? name :"User"}!</strong> 
+            <p>Your age is: {age? age: 0} </p>
+        </div>   
     )
 }
 

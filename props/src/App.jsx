@@ -5,7 +5,7 @@ export function App() {
         <div>
             <h1>Learning props.</h1>
             <hr />
-            <Welcome name="John" age={50} />
+            <Welcome name="John" age={10} />
         </div> 
     )
 }

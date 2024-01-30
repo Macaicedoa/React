@@ -1,6 +1,9 @@
 export function Age({age}) {
     return(
-        <p>Your age is: {age? age: 0} </p>
+        <div>
+            {Boolean(age) && <p>Your age is: {age} </p>}
+            {age === 0 && <p>You are very young!!</p>}
+        </div> 
     )
     
 }

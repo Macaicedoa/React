@@ -1,4 +1,5 @@
 import { AlertClock } from "./AlertClock";
+import { Counter } from "./Counter";
 import { Welcome } from "./Welcome";
 
 export function App() {
@@ -17,6 +18,7 @@ export function App() {
             <Welcome name="John" age={10} />
 
             <AlertClock handler={handleShowCurrentTime}/>
+            <Counter initValue = {0} incrementValue={2}/>
         </div> 
     )
 }

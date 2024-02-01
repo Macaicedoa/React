@@ -14,7 +14,7 @@ export function Counter({initValue = 0,incrementValue = 1}) {
     }
 
     function handleCounterReset() {
-        setCounter(0)
+        setCounter(initValue)
     }
 
     return(

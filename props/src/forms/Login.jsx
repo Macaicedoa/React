@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react"
+import { useState } from "react"
 
 function Login({onLogin}) {
   
@@ -19,14 +19,6 @@ function Login({onLogin}) {
 		setData((data)=>
 				 {return {...data,[name]:(type!="checkbox"?value:checked)} }	
 		)
-
-		setData((data)=>{
-			if (data.username.length>=1 && data.password.length>=1) {
-				return {...data,buttonDisabled:false} 
-			}else {
-				return {...data,buttonDisabled:true} 
-			}
-		})
 	}
 
 	function handleButtonLogIn() {
@@ -59,7 +51,7 @@ function Login({onLogin}) {
 				<label htmlFor="remember">Remember:</label>
 				<input type="checkbox" checked={data.rememberChecked} name="rememberChecked" onChange={handleInputChange}/>
 				<br />
-				<button disabled={data.buttonDisabled} onClick={handleButtonLogIn}>Login</button>
+				<button disabled={!data.username||!data.password} onClick={handleButtonLogIn}>Login</button>
 			</form>
 			{/* Boton de reset */}
 			<button onClick={handleButtonReset} >Reset</button> 

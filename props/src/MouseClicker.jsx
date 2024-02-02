@@ -1,7 +1,7 @@
 function MouseClicker() {
   
 	function handleButtonClick(event) {
-				console.log(event.target.name)
+		console.log(event.target.name)
 	}
 
 	function handleimageClick(event) {

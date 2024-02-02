@@ -7,7 +7,7 @@ function MouseClicker() {
 	function handleimageClick(event) {
 		event.stopPropagation();
 		console.log(event.target.src)	
-}
+	}
 
   return (
     <button name= "one" onClick={handleButtonClick}>

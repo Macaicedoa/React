@@ -37,19 +37,26 @@ function Login({onLogin}) {
 			buttonDisabled: true
 		})
 	}
+
+	function handleSubmit(event) {
+		event.preventDefault(); /*El evento default del browser es que al hacer submit la página se refresca */
+		alert("Enviado")
+	}
 	
   return (
 		<div>
-			<label htmlFor="username">User:</label>
-			<input name="username" value={data.username} type="text" onChange={handleInputChange}/>
-			<br />
-			<label htmlFor="password">Password</label>
-			<input type="password" value={data.password} name="password" onChange={handleInputChange}/>
-			<br />
-			<label htmlFor="remember">Remember:</label>
-			<input type="checkbox" checked={data.rememberChecked} name="rememberChecked" onChange={handleInputChange}/>
-			<br />
-			<button disabled={data.buttonDisabled} onClick={handleButtonLogIn}>Login</button>
+			<form onSubmit={handleSubmit}>
+				<label htmlFor="username">User:</label>
+				<input name="username" value={data.username} type="text" onChange={handleInputChange}/>
+				<br />
+				<label htmlFor="password">Password</label>
+				<input type="password" value={data.password} name="password" onChange={handleInputChange}/>
+				<br />
+				<label htmlFor="remember">Remember:</label>
+				<input type="checkbox" checked={data.rememberChecked} name="rememberChecked" onChange={handleInputChange}/>
+				<br />
+				<button disabled={data.buttonDisabled} onClick={handleButtonLogIn}>Login</button>
+			</form>
 			{/* Boton de reset */}
 			<button onClick={handleButtonReset} >Reset</button> 
 		</div>

@@ -17,8 +17,6 @@ function Login() {
 		setData(()=>{
 			return {...data,[name]:(type!="checkbox"?value:checked)}
 		})
-
-		console.log(data)
 	}
 	
   return (

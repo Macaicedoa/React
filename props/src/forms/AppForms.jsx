@@ -3,6 +3,11 @@ import InteractiveWelcome from './InteractiveWelcome'
 import Login from './Login'
 
 function AppForms() {
+
+    function onLogin(state) {
+        console.log(state)
+    }
+
   return (
     <div>
         <h1>Learning React.</h1>
@@ -11,7 +16,7 @@ function AppForms() {
         <InteractiveWelcome/>
         <hr />
         <h2>Login</h2>
-        <Login/>
+        <Login onLogin={onLogin}/>
     </div>
   )
 }

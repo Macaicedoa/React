@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useEffect, useState } from "react"
 
 function Login({onLogin}) {
   
@@ -16,11 +16,15 @@ function Login({onLogin}) {
 		const value = event.target.value
 		const checked = event.target.checked
 
-		setData(()=>{
+		setData((data)=>
+				 {return {...data,[name]:(type!="checkbox"?value:checked)} }	
+		)
+
+		setData((data)=>{
 			if (data.username.length>=1 && data.password.length>=1) {
-				return {...data,[name]:(type!="checkbox"?value:checked),buttonDisabled:false} 
+				return {...data,buttonDisabled:false} 
 			}else {
-				return {...data,[name]:(type!="checkbox"?value:checked),buttonDisabled:true} 
+				return {...data,buttonDisabled:true} 
 			}
 		})
 	}

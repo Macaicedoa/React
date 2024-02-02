@@ -25,8 +25,17 @@ function Login({onLogin}) {
 		})
 	}
 
-	function handleButtonClick() {
+	function handleButtonLogIn() {
 		onLogin(data)
+	}
+
+	function handleButtonReset() {
+		setData({
+			username:"",
+			password:"",
+			rememberChecked: false,
+			buttonDisabled: true
+		})
 	}
 	
   return (
@@ -40,7 +49,9 @@ function Login({onLogin}) {
 			<label htmlFor="remember">Remember:</label>
 			<input type="checkbox" checked={data.rememberChecked} name="rememberChecked" onChange={handleInputChange}/>
 			<br />
-			<button disabled={data.buttonDisabled} onClick={handleButtonClick}>Login</button>
+			<button disabled={data.buttonDisabled} onClick={handleButtonLogIn}>Login</button>
+			{/* Boton de reset */}
+			<button onClick={handleButtonReset} >Reset</button> 
 		</div>
   )
 }

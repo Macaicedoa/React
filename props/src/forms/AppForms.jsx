@@ -1,6 +1,7 @@
 import React from 'react'
 import InteractiveWelcome from './InteractiveWelcome'
 import Login from './Login'
+import UncontrolledForm from './UncontrolledForm'
 
 function AppForms() {
 
@@ -15,8 +16,11 @@ function AppForms() {
         <hr /> 
         <InteractiveWelcome/>
         <hr />
-        <h2>Login</h2>
+        <h2>Login Controlled</h2>
         <Login onLogin={onLogin}/>
+        <hr />
+        <h2>Login Uncontrolled</h2>
+        <UncontrolledForm/>
     </div>
   )
 }

@@ -30,7 +30,6 @@ function Login({onLogin}) {
 			username:"",
 			password:"",
 			rememberChecked: false,
-			buttonDisabled: true
 		})
 	}
 

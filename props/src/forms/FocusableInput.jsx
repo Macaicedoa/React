@@ -2,6 +2,7 @@ import { useEffect, useRef } from "react"
 
 function FocusableInput() {
 
+  const mountedRef = useRef(false);
   const inputRef = useRef(null)
 
   useEffect(()=>{

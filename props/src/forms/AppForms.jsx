@@ -2,6 +2,7 @@ import React from 'react'
 import InteractiveWelcome from './InteractiveWelcome'
 import Login from './Login'
 import UncontrolledForm from './UncontrolledForm'
+import FocusableInput from './FocusableInput'
 
 function AppForms() {
 
@@ -21,6 +22,8 @@ function AppForms() {
         <hr />
         <h2>Login Uncontrolled</h2>
         <UncontrolledForm/>
+        <hr />
+        <FocusableInput/>
     </div>
   )
 }

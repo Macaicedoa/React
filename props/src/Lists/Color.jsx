@@ -1,8 +1,6 @@
 function Color({color}) {
-  return (
-    <li>
-        {color.name}
-    </li>
+  return (    
+    <li>{color.name}</li>
   )
 }
 

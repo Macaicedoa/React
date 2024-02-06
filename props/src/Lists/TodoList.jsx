@@ -16,6 +16,10 @@ function TodoList() {
     setTodo([...todos,inputValue])
     setInputValue("")
   }
+
+  function handleResetClick() {
+    setTodo([])
+  }
   
 
   return (
@@ -25,6 +29,7 @@ function TodoList() {
       </ul>
       <input value={inputValue} name="input" type="text" onChange={handleInputToDo}/>
       <button onClick={handleAddClick}>Add To Do</button>
+      <button onClick={handleResetClick}>Delete To Do list</button>
     </div>
   );
 }

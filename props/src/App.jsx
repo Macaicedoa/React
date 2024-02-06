@@ -1,5 +1,6 @@
 import { AlertClock } from "./AlertClock";
 import Clock from "./Clock";
+import Colors from "./Colors";
 import { Counter } from "./Counter";
 import MouseClicker from "./MouseClicker";
 import MyForm from "./MyForm";
@@ -13,6 +14,15 @@ export function App() {
         alert(`The current time is: ${currentTime.toLocaleTimeString()}`)
     }
 
+    const colors =[
+        {id:1,
+        name:"red"},
+        {id:2,
+        name:"blue"},
+        {id:3,
+        name:"green"}
+    ]
+   
 
     return(
         <div>
@@ -28,6 +38,9 @@ export function App() {
             <MouseClicker />
             <hr />
             <MyForm/>
+            <hr />
+            <h2>Colores</h2>
+            <Colors colors={colors}/>
         </div> 
     )
 }

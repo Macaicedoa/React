@@ -4,6 +4,7 @@ import { createRoot } from 'react-dom/client'
 import AppForms from "./forms/AppForms";
 import References from "./References";
 import AppColors from "./Lists/AppColors";
+import AppTodoList from "./Lists/AppTodoList";
 
 createRoot(document.getElementById('root')).render( 
     <> {/*Etiquetas vacías para no añadir divs*/}
@@ -13,6 +14,7 @@ createRoot(document.getElementById('root')).render(
         {/* <AppForms/> */}
         {/* <References/> */}
         <AppColors/>
+        <AppTodoList/>
     {/* </StrictMode>   */}
     
     </>

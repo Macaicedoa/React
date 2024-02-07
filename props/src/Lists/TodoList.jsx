@@ -5,11 +5,8 @@ import Todo from "./Todo";
 function TodoList() {
   let [todos, setTodo] = useState([]);
   let [inputValue, setInputValue] = useState("");
-//   let insertedTodo = useRef("");
-
   
   function handleInputToDo(event) {
-    // insertedTodo.current = event.target.value
     setInputValue(event.target.value)
   }
 

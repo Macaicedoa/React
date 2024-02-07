@@ -30,9 +30,6 @@ export function App() {
             <MouseClicker />
             <hr />
             <MyForm/>
-            <hr />
-            <h2>Colores</h2>
-            <Colors colors={colors}/>
         </div> 
     )
 }

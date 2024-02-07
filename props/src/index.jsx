@@ -5,16 +5,17 @@ import AppForms from "./forms/AppForms";
 import References from "./References";
 import AppColors from "./Lists/AppColors";
 import AppTodoList from "./Lists/AppTodoList";
+import "./index.css";
 
 createRoot(document.getElementById('root')).render( 
     <> {/*Etiquetas vacías para no añadir divs*/}
     {/* <StrictMode> */}
 
-        {/* <App /> */}
+        <App />
         {/* <AppForms/> */}
         {/* <References/> */}
-        <AppColors/>
-        <AppTodoList/>
+        {/* <AppColors/>
+        <AppTodoList/> */}
     {/* </StrictMode>   */}
     
     </>

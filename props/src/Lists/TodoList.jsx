@@ -23,9 +23,9 @@ function TodoList() {
     <div>
       <ul>
         {todos.map((todo, index) => 
-          <li key={index}>
-            <p>{todo}</p>
-            <button onClick={()=>setTodo(prevTodos => prevTodos.filter((item, i) => i !== index))}>Remove item</button>
+            <li key={index}>
+                <p>{todo}</p>
+                <button onClick={()=>setTodo(prevTodos => prevTodos.filter((item, i) => i !== index))}>Remove item</button>
             </li>
         )} 
       </ul>

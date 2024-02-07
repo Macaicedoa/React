@@ -1,15 +1,16 @@
 import { useEffect, useRef, useState } from "react";
 import Todo from "./Todo";
 
+
 function TodoList() {
   let [todos, setTodo] = useState([]);
-  let [inputValue, setInputValue] = useState([]);
-  let insertedTodo = useRef("");
+  let [inputValue, setInputValue] = useState("");
+//   let insertedTodo = useRef("");
 
   
   function handleInputToDo(event) {
-    insertedTodo.current = event.target.value
-    setInputValue(insertedTodo.current)
+    // insertedTodo.current = event.target.value
+    setInputValue(event.target.value)
   }
 
   function handleAddClick(){
@@ -20,15 +21,19 @@ function TodoList() {
   function handleResetClick() {
     setTodo([])
   }
-  
 
   return (
     <div>
       <ul>
-        <Todo items={todos}/>
+        {todos.map((todo, index) => 
+          <li key={index}>
+            <p>{todo}</p>
+            <button onClick={()=>setTodo(prevTodos => prevTodos.filter((item, i) => i !== index))}>Remove item</button>
+            </li>
+        )} 
       </ul>
       <input value={inputValue} name="input" type="text" onChange={handleInputToDo}/>
-      <button onClick={handleAddClick}>Add To Do</button>
+      <button onClick={handleAddClick} disabled={!inputValue}>Add To Do</button>
       <button onClick={handleResetClick}>Delete To Do list</button>
     </div>
   );

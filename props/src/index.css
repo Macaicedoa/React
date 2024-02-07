@@ -1,4 +1,9 @@
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
 .welcome{
-    background-color: bisque;
+    background-color: rgb(230, 192, 177);
     border: solid 2px tomato;
+    text-align: center;
+    font-size: x-large;
 }

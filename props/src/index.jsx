@@ -11,11 +11,11 @@ createRoot(document.getElementById('root')).render(
     <> {/*Etiquetas vacías para no añadir divs*/}
     {/* <StrictMode> */}
 
-        {/* <App /> */}
+        <App />
         {/* <AppForms/> */}
         {/* <References/> */}
-        <AppColors/>
-         <AppTodoList/>
+        {/* <AppColors/> */}
+         {/* <AppTodoList/> */}
     {/* </StrictMode>   */}
     
     </>

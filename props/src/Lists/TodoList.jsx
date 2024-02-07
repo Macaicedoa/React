@@ -22,12 +22,7 @@ function TodoList() {
   return (
     <div>
       <ul>
-        {todos.map((todo, index) => 
-            <li key={index}>
-                <p>{todo}</p>
-                <button onClick={()=>setTodo(prevTodos => prevTodos.filter((item, i) => i !== index))}>Remove item</button>
-            </li>
-        )} 
+        <Todo items={todos} setItems={setTodo}/>
       </ul>
       <input value={inputValue} name="input" type="text" onChange={handleInputToDo}/>
       <button onClick={handleAddClick} disabled={!inputValue}>Add To Do</button>

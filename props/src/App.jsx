@@ -20,11 +20,11 @@ export function App() {
         setLanguage(language)
     }
 
-    function handleShowCurrentTime() {
-        const currentTime = new Date()
+    // function handleShowCurrentTime() {
+    //     const currentTime = new Date()
 
-        alert(`The current time is: ${currentTime.toLocaleTimeString()}`)
-    }
+    //     alert(`The current time is: ${currentTime.toLocaleTimeString()}`)
+    // }
 
     return(
         <Container title={<h1>Learning React.</h1>}>

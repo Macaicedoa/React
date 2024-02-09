@@ -6,8 +6,18 @@ import MouseClicker from "./MouseClicker";
 import MyForm from "./MyForm";
 import { Welcome } from "./Welcome";
 import Container from "./Container";
+import { LanguageContext } from "./LanguageContext";
+import { useState } from "react";
+
 
 export function App() {
+
+    const [language, setLanguage] = useState('en')
+
+    function handletSetLanguage(language) {
+        console.log(language)
+        setLanguage(language)
+    }
 
     function handleShowCurrentTime() {
         const currentTime = new Date()
@@ -22,7 +32,14 @@ export function App() {
             <AlertClock handler={handleShowCurrentTime}/>
             <Counter initValue = {0} incrementValue={2}/>
             <hr />
-            <Clock/>
+            <LanguageContext.Provider value={language}>
+                <select value={language} onChange={(e)=>handletSetLanguage(e.target.value)}>
+                    <option value="es">ES</option>
+                    <option value="en">EN</option>
+                </select>
+                <Clock/>
+
+            </LanguageContext.Provider>
             <hr />
             <MouseClicker />
             <hr />

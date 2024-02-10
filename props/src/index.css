@@ -17,3 +17,14 @@
     background-color: rgb(255, 243, 231);
     border-radius: 20px;
 }
+.github-users{
+    text-align: center;
+}
+.github-users h2{
+    color: brown;
+}
+.github-users li{
+    padding: 0;
+    text-align: start;
+    list-style-type: decimal;
+}

@@ -9,6 +9,7 @@ import Container from "./Container";
 import { LanguageContext } from "./LanguageContext";
 import { useState } from "react";
 import GithubUser from "./GithubUser";
+import GithubUsers from "./GithubUsers";
 
 
 export function App() {
@@ -30,7 +31,8 @@ export function App() {
         <Container title={<h1>Learning React.</h1>}>
             <hr />
             <Welcome name="John" age={10} />
-            <GithubUser username={"macaicedoa"}/>
+            {/* <GithubUser username={"macaicedoa"}/> */}
+            <GithubUsers/>
             <hr />
             <LanguageContext.Provider value={language}>
                 <select value={language} onChange={(e)=>handletSetLanguage(e.target.value)}>

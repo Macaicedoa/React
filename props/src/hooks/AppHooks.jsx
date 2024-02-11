@@ -1,12 +1,14 @@
-import GithubUser from "../GithubUser"
+
+import HookGithubUser from "./HookGithubUSer"
 import HookCounter from "./hookCounter"
 
 function AppHooks() {
   return (
+    
     <div>
         <HookCounter/>
         <hr />
-        <GithubUser username={"macaicedoa"}/>
+        <HookGithubUser username={"macaicedoa"}/>
     </div>
     
   )

@@ -27,5 +27,5 @@ export function useGithubUser(username) {
       })
     },[username])
   
-    return {data,loading,error}
+    return {data,loading, error}
   }

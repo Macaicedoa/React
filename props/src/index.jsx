@@ -7,16 +7,18 @@ import AppColors from "./Lists/AppColors";
 import AppTodoList from "./Lists/AppTodoList";
 import "./index.css";
 import "./clock-style.scss"
+import AppHooks from "./hooks/AppHooks";
 
 createRoot(document.getElementById('root')).render( 
     <> {/*Etiquetas vacías para no añadir divs*/}
     {/* <StrictMode> */}
 
-        <App />
+        {/* <App /> */}
         {/* <AppForms/> */}
         {/* <References/> */}
         {/* <AppColors/> */}
          {/* <AppTodoList/> */}
+         <AppHooks/>
     {/* </StrictMode>   */}
     
     </>

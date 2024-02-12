@@ -28,3 +28,9 @@
     text-align: start;
     list-style-type: decimal;
 }
+a{
+    margin: 20px;
+}
+.links-to{
+    margin-top: 20px;
+}

@@ -18,7 +18,7 @@ export function useGithubUser(username) {
         return response.json()
       })
       .then(json=>{
-        console.log(json)
+        
         setLoading(false)
         setData(json)
       })

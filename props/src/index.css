@@ -33,4 +33,6 @@ a{
 }
 .links-to{
     margin-top: 20px;
+    background-color: rgb(245, 223, 220);
+    padding: 15px;
 }

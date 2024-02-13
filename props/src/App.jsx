@@ -3,6 +3,7 @@ import { Welcome } from "./Welcome";
 import {Counter} from "./Counter"
 import ShowGithubUser from "./ShowGithubUser";
 import NotFound from "./NotFound";
+import GithubUsersList from "./GithubUsersList";
 
 export function App() {
 
@@ -11,7 +12,7 @@ export function App() {
             <div className="links-to">
                 <Link to="/" >Volver al inicio</Link>
                 <Link to="/counter" >Ver Contador</Link>
-                <Link to="/users/macaicedoa">Ver GitHub User</Link>
+                <Link to="/users/macaicedoa">Ver GitHub Users</Link>
             </div>
             <Routes>
                 <Route path="/" element={<Welcome name="Juan"/>}/>
@@ -19,6 +20,7 @@ export function App() {
                 <Route path="/users/:username" element={<ShowGithubUser/>}/>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
+            <GithubUsersList/>
             
         </>
     )

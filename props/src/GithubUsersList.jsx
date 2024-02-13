@@ -8,12 +8,7 @@ function GithubUsersList() {
     useEffect(()=>{
       fetch(`https://api.github.com/users`)
       .then(response=>{
-  
-        if (response.status !== 200) {
-          setError(new Error(`User not found`))
-        }
-  
-        return response.json()
+          return response.json()
       })
       .then(json=>{
         // console.log(json)
@@ -23,7 +18,6 @@ function GithubUsersList() {
         console.log(error)
       })
     },[])
-
 
   return (
 

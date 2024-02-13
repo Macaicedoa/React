@@ -18,7 +18,7 @@ function GithubUser({username}) {
       return response.json()
     })
     .then(json=>{
-      console.log(json)
+      // console.log(json)
       setLoading(false)
       setData(json)
     })

@@ -1,15 +1,11 @@
 import { useEffect, useState } from "react"
-import { Link } from "react-router-dom"
-import GithubUser from "./GithubUser"
+import { Link, Outlet } from "react-router-dom"
 
 function GithubUsersList() {
 
     const [data,setData] = useState([])
-    const [loading,setLoading] =useState(false)
-    const [error, setError] = useState(null)
   
     useEffect(()=>{
-      setLoading(true)
       fetch(`https://api.github.com/users`)
       .then(response=>{
   
@@ -20,30 +16,30 @@ function GithubUsersList() {
         return response.json()
       })
       .then(json=>{
-        console.log(json)
-        setLoading(false)
+        // console.log(json)
         setData(json)
       })
       .catch(error=>{
-        setError(error)
+        console.log(error)
       })
     },[])
 
-console.log(data)
 
   return (
 
     <div className="github-users"> 
         <h2>Github users</h2>
         <ul>
-            {data.map((user,index)=>{
+            {data.map((user)=>{
+
                 return(
-                <li key={index}>
-                    <Link>username={user.login}</Link> 
-                    {/* <GithubUser username={user.login}/> */}
+                <li key={user.id}>
+                    <Link to={`/users/${user.login}`}>{user.login}</Link> 
                 </li>)
             })}
         </ul>
+        <hr />
+        <Outlet/>
     </div>
 
     )

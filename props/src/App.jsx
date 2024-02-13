@@ -12,15 +12,17 @@ export function App() {
             <div className="links-to">
                 <Link to="/" >Volver al inicio</Link>
                 <Link to="/counter" >Ver Contador</Link>
-                <Link to="/users/macaicedoa">Ver GitHub Users</Link>
+                <Link to="/users" >Ver Usuarios</Link>
             </div>
             <Routes>
                 <Route path="/" element={<Welcome name="Juan"/>}/>
                 <Route path="/counter" element={<Counter initValue={10}/>}/>
-                <Route path="/users/:username" element={<ShowGithubUser/>}/>
+                <Route path="/users" element={<GithubUsersList/>}>
+                    <Route path=":username" element={<ShowGithubUser/>}/>
+                </Route>
                 <Route path="*" element={<NotFound/>}/>
             </Routes>
-            <GithubUsersList/>
+            
             
         </>
     )

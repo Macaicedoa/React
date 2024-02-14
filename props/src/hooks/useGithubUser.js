@@ -5,7 +5,11 @@ const fetcher = (username) => {if(username){ return fetch(`https://api.github.co
 export function useGithubUser(username) {
 
   
-  const {data,error,isLoading} = useSWR(username,fetcher)
+  const {data,error,mutate} = useSWR(username,fetcher)
 
-  return {data, error}
+  function fetchGithubUser() {
+    mutate()
+  }
+
+  return {data, error,onFetchingGithubUser:fetchGithubUser}
   }

@@ -1,5 +1,5 @@
 import { StrictMode } from "react";
-import { App } from "./App";
+import  AppHooks  from "./hooks/AppHooks";
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter } from "react-router-dom";
 import "./index.css";
@@ -7,10 +7,11 @@ import "./clock-style.scss"
 
 
 createRoot(document.getElementById('root')).render( 
+
     <> {/*Etiquetas vacías para no añadir divs*/}
     {/* <StrictMode> */}
     <BrowserRouter>
-        <App/>
+        <AppHooks/>
     </BrowserRouter>
          
     {/* </StrictMode>   */}
